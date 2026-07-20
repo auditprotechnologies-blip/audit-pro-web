@@ -1,6 +1,6 @@
 {
   "buildCommand": "rm -f package-lock.json && npm install && npm run build",
-  "outputDirectory": "admin/dist",
+  "outputDirectory": "dist",
   "installCommand": "echo 'handled in build'",
   "framework": null,
   "rewrites": [
