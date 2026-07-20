@@ -10,7 +10,7 @@
     "dev:admin": "npm run dev --workspace=admin",
     "build:app": "npm run build --workspace=audit-pro-dashboard-main",
     "build:admin": "npm run build --workspace=admin",
-    "build": "npm run build:app && npm run build:admin",
+    "build": "npm run build:admin",
     "lint": "npm run lint --workspaces"
   }
 }
