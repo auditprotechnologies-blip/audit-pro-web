@@ -1,0 +1,16 @@
+{
+  "name": "audit-pro-monorepo",
+  "private": true,
+  "workspaces": [
+    "audit-pro-dashboard-main",
+    "admin"
+  ],
+  "scripts": {
+    "dev:app": "npm run dev --workspace=audit-pro-dashboard-main",
+    "dev:admin": "npm run dev --workspace=admin",
+    "build:app": "npm run build --workspace=audit-pro-dashboard-main",
+    "build:admin": "npm run build --workspace=admin",
+    "build": "npm run build:app && npm run build:admin",
+    "lint": "npm run lint --workspaces"
+  }
+}

@@ -1,0 +1,134 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Audit Pro Design System — Dark-first, brand red + gold */
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius: 10px;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 6px);
+  --radius-3xl: calc(var(--radius) + 14px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-surface: var(--surface);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-deep: var(--brand-deep);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-success: var(--success);
+}
+
+:root {
+  /* Dark-first defaults */
+  --background: #090909;
+  --foreground: #ffffff;
+  --card: #121212;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --surface: #1a1a1a;
+
+  --brand: #c91f28;
+  --brand-dark: #a01820;
+  --brand-deep: #75070c;
+  --gold: #ffd56c;
+  --gold-dark: #f39a00;
+  --success: #18c964;
+
+  --primary: #c91f28;
+  --primary-foreground: #ffffff;
+  --secondary: #1c1a18;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #a8a8a8;
+  --accent: #c91f28;
+  --accent-foreground: #ffffff;
+  --destructive: #c91f28;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: #1c1a18;
+  --ring: rgba(201, 31, 40, 0.4);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: rgba(201, 31, 40, 0.4);
+    color: #fff;
+  }
+}
+
+@utility text-gold-gradient {
+  background: linear-gradient(180deg, #ffd56c 0%, #f39a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-brand-gradient {
+  background: linear-gradient(135deg, #c91f28, #a01820);
+}
+
+@utility bg-card-gradient {
+  background: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.6));
+}
+
+@utility shadow-brand {
+  box-shadow: 0 4px 20px rgba(201, 31, 40, 0.3);
+}
+
+@utility shadow-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+@utility shadow-pos {
+  box-shadow: 0 4px 0 #5a0509, 0 5px 10px rgba(117, 7, 12, 0.3);
+}
+
+@utility glass-nav {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
